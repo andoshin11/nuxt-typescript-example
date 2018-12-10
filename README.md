@@ -2,9 +2,11 @@
 
 > My praiseworthy Nuxt.js project
 
+Article → [https://blog.andoshin11.me/posts/nuxt-with-typescript](https://blog.andoshin11.me/posts/nuxt-with-typescript)
+
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ yarn install
 
