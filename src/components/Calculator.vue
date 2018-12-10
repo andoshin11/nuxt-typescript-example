@@ -1,13 +1,21 @@
 <template>
   <div class="Calculator">
-    <input type="number" class="left" v-model="left">
-    <select name="operator" v-model="operator">
+    <input 
+      v-model="left" 
+      type="number" 
+      class="left">
+    <select 
+      v-model="operator" 
+      name="operator">
       <option :value="Operators.ADD">+</option>
       <option :value="Operators.SUBTRACT">-</option>
       <option :value="Operators.MULTIPLE">*</option>
       <option :value="Operators.DEVIDE">/</option>
     </select>
-    <input type="number" class="right" v-model="right">
+    <input 
+      v-model="right" 
+      type="number" 
+      class="right">
     <div class="answer">= {{ answer }}</div>
   </div>
 </template>
