@@ -9,7 +9,14 @@
     "build": "nuxt build",
     "start": "cross-env NODE_ENV=production node src/server/index.js",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "npm-run-all lint:*",
+    "lintfix": "npm-run-all lintfix:*",
+    "lint:js": "eslint --ext .js .",
+    "lintfix:js": "yarn run lint:js --fix",
+    "lint:ts": "eslint -c .eslintrc.ts.js --ext .ts .",
+    "lintfix:ts": "yarn run lint:ts --fix",
+    "lint:vue": "eslint -c .eslintrc.vue.js --ext .vue .",
+    "lintfix:vue": "yarn run lint:vue --fix",
     "precommit": "npm run lint"
   },
   "dependencies": {
@@ -22,12 +29,16 @@
     "babel-eslint": "^8.2.1",
     "eslint": "^5.0.1",
     "eslint-config-prettier": "^3.1.0",
+    "eslint-config-typescript": "^1.1.0",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-prettier": "2.6.2",
+    "eslint-plugin-typescript": "^0.14.0",
     "eslint-plugin-vue": "^4.0.0",
     "nodemon": "^1.11.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "1.14.3",
     "ts-loader": "^5.3.1",
-    "typescript": "^3.2.2"
+    "typescript": "^3.2.2",
+    "typescript-eslint-parser": "^21.0.2"
   }
 }
